@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--Very-Light-Gray);
+}
+
+/* Start The Design */
+main {
+  position: relative;
+}
+main .titles {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+main .titles h1.main-alt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Grayish-Blue);
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 45px;
+  margin-bottom: 0;
+}
+main .titles h1.main {
+  color: var(--Very-Dark-Blue);
+  margin-top: 10px;
+}
+main .titles .p {
+  width: 100%;
+}
+main .titles .p p {
+  max-width: 610px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--Grayish-Blue);
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: center;
+}
+main .container {
+  margin-left: 50px;
+  margin-right: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+main .container .info {
+  background-color: var(--Very-Light-Gray);
+  padding: 0px 15px;
+  position: relative;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+}
+main .container .supervisor,
+main .container .calculator {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .container .info::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+}
+main .container .supervisor::before {
+  background-color: var(--Cyan);
+}
+main .container .team-builder::before {
+  background-color: var(--Red);
+}
+main .container .karma::before {
+  background-color: var(--Orange);
+}
+main .container .calculator::before {
+  background-color: var(--Blue);
+}
+main .container .info h1 {
+  font-size: 23px;
+  color: var(--Very-Dark-Blue);
+  margin-top: 30px;
+  padding-top: 25px;
+}
+main .container .info p {
+  color: var(--Grayish-Blue);
+  font-size: 15px;
+  line-height: 1.6;
+  width: 100%;
+}
+main .container .info img {
+  padding: 10px 0 22px;
+  width: 60px;
+  position: relative;
+  left: 80%;
+}
+@media (max-width: 575px) {
+  main .container {
+    text-align: center;
+  }
+  main .container .info img {
+    left: 40%;
+  }
+}
+/* End The Design */
+/* Footer  */
+footer {
+  background-color: var(--Very-Dark-Blue);
+}
+footer .info {
+  margin: 61px 0 -16px 0;
+}
+footer .info p {
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+footer .info p a {
+  color: var(--Cyan);
+  text-decoration: none;
+}
